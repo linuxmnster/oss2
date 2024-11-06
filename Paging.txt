@@ -1,0 +1,30 @@
+Paging is a memory management scheme used by operating systems to manage and allocate memory efficiently. It divides a program's memory into fixed-size blocks, known as "pages," which are stored in the physical memory's corresponding "page frames" When a program runs, only the required pages are loaded into memory, which makes paging especially useful in managing limited RAM resources effectively.
+
+Advantages of Paging
+
+Efficient Memory Management
+Paging allows the system to use memory more efficiently by loading only the necessary pages into physical memory, reducing the need to load entire programs at once.
+
+Flexibility in Program Execution
+Paging enables processes to be split across multiple memory locations, allowing programs to use more memory than is physically available by loading and swapping pages as needed.
+
+Simplified Memory Allocation
+Because pages and frames are of fixed size, memory allocation becomes simpler, with less need for complex calculations to find appropriate memory slots for data.
+
+Disadvantages of Paging
+Overhead of Page Tables
+Paging requires maintaining a page table, which maps logical pages to physical frames. This can consume additional memory and CPU resources, especially for large processes.
+
+Slower Access Due to Page Faults
+When a required page is not in physical memory, a page fault occurs, which requires loading the page from secondary storage (e.g., disk) into RAM. This can slow down program execution significantly.
+
+Increased Latency
+Paging introduces a delay in memory access, as the system must look up the page table to find the corresponding physical address before accessing data.
+
+Internal Fragmentation
+Although paging reduces external fragmentation, it can lead to internal fragmentation. Since pages are fixed in size, a program may not use up the entire page, leaving unused space within a page.
+
+Complexity in Implementation
+Paging requires careful management of page tables and memory mapping, which adds complexity to the operating system's design and handling of memory.
+
+
